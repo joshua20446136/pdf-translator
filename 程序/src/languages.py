@@ -50,6 +50,7 @@ class Lang:
 # 目标语（可译入）。源语言额外含 auto。
 _TARGETS: List[Lang] = [
     Lang("zh", "中文", "简体中文", True, True, _has_han),
+    Lang("zh-Hant", "繁体中文", "繁體中文", True, True, _has_han),  # 新增繁体中文
     Lang("en", "英语", "英语", False, False, None),
     Lang("ja", "日语", "日语", True, False, lambda t: _has_han(t) or _has_kana(t)),
     Lang("ko", "韩语", "韩语", False, False, _has_hangul),
